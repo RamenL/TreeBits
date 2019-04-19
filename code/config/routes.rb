@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :bit_modules
+  resources :bit_module_names
   #devise_for :users
   scope format: false do
     resources :organizations, constraints: { id: /.+/ }

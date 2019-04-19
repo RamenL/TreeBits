@@ -1,0 +1,57 @@
+<%= form_for(bit_module) do |f| %>
+  <% if bit_module.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bit_module.errors.count, "error") %> prohibited this bit_module from being saved:</h2>
+
+      <ul>
+      <% bit_module.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_added %>
+    <%= f.text_field :date_added %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_modified %>
+    <%= f.text_field :last_modified %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub_topic_one %>
+    <%= f.number_field :sub_topic_one %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub_topic_two %>
+    <%= f.number_field :sub_topic_two %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub_topic_three %>
+    <%= f.number_field :sub_topic_three %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub_topic_four %>
+    <%= f.number_field :sub_topic_four %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub_topic_five %>
+    <%= f.number_field :sub_topic_five %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

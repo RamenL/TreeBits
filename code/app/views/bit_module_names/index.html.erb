@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bit Module Names</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date added</th>
+      <th>Last modified</th>
+      <th>Author</th>
+      <th>Sub topic one</th>
+      <th>Sub topic two</th>
+      <th>Sub topic three</th>
+      <th>Sub topic four</th>
+      <th>Sub topic five</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bit_module_names.each do |bit_module_name| %>
+      <tr>
+        <td><%= bit_module_name.date_added %></td>
+        <td><%= bit_module_name.last_modified %></td>
+        <td><%= bit_module_name.author %></td>
+        <td><%= bit_module_name.sub_topic_one %></td>
+        <td><%= bit_module_name.sub_topic_two %></td>
+        <td><%= bit_module_name.sub_topic_three %></td>
+        <td><%= bit_module_name.sub_topic_four %></td>
+        <td><%= bit_module_name.sub_topic_five %></td>
+        <td><%= link_to 'Show', bit_module_name %></td>
+        <td><%= link_to 'Edit', edit_bit_module_name_path(bit_module_name) %></td>
+        <td><%= link_to 'Destroy', bit_module_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bit Module Name', new_bit_module_name_path %>

@@ -1,11 +1,17 @@
-p, ol, ul, td {
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
 }
 
-h1 {
-  text-align: center;
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
 }
 
 pre {
@@ -14,118 +20,27 @@ pre {
   font-size: 11px;
 }
 
-table{
-  border-collapse: collapse;
-  margin: auto;
-  width:50%;
-}
+a {
+  color: #000;
 
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
 
 th {
-  padding-bottom: 12px;
-  padding-left: 15px;
-  border-bottom: 3px solid rgb(5, 102, 141);
-  text-align: left;
-}
-
-.approved {
-  background-color: #5cb85c42;
-}
-
-.unapproved {
-  background-color: #d9534f42;
+  padding-bottom: 5px;
 }
 
 td {
   padding-bottom: 7px;
-  padding-left: 15px;
+  padding-left: 5px;
   padding-right: 5px;
-  border-bottom: 1.5px solid rgb(2, 195, 154);
-  text-align:left;
-  height: 30px;
-}
-
-//table tbody tr{
-//border-bottom: 1.5px solid rgb(2, 195, 154);
-//width:100%;
-//}
-
-.form{
-  margin-left: 0px;
-  margin-bottom: 20px;
-}
-
-.container-butt{
-/*width: 100%;
-  float: right;
-  position: absolute;*/
-  width: auto;
-  padding:10px;
-  text-align:right;
-  bottom: 50px;
-  right: 50px;
-  position: fixed;
-  color: white;
-}
-
-.container-butt, .styledButton  a:link, .editButt  a:link{
-  color: white;
-  background-color: rgb(2, 195, 154);
-  border-radius: 8px;
-  padding:10px;
-  text-decoration: none;
-  //color: white;
-}
-
-.editButt{
-  margin: auto;
-  margin-top: 10px;
-  width:50%;
-  padding:10px;
-  text-align:right;
-  color: white;
-}
-
-.styledButton{
-  margin: auto;
-  //margin-top: 10px;
-  //width:50%;
-  display:inline-block;
-  //padding:10px;
-  //text-align:right;
-  color: white;
-}
-
-.backButt {
-
-  width: auto;
-  padding:10px;
-  text-align:right;
-  bottom: 50px;
-  left: 50px;
-  position: fixed;
-  color: white;
-
-}
-
-.submitButt{
-  padding:0 0 30px 30px;
-
-
-}
-
-.backButt a:link{
-
-  color: white;
-  background-color: rgb(2, 195, 154);
-  border-radius: 8px;
-  padding:10px;
-  text-decoration: none;
-
-}
-
-.location-tab {
-  border-bottom: 0px white;
 }
 
 div {
@@ -135,38 +50,22 @@ div {
 }
 
 #notice {
-  color: #428bca;  
-  text-align: center;
-  font-size: large;
-  font-weight: bold;
+  color: green;
 }
-
 
 .field_with_errors {
-  padding: 0px;
-  background-color: #d9534f;
+  padding: 2px;
+  background-color: red;
   display: table;
-  border-radius: 3px;
-
-}
-
-.field_with_errors label {
-  padding: 0px;
-  background-color: #ffffff;
-  //display: table;
-  //border-radius: 3px;
-
 }
 
 #error_explanation {
-  padding-left: 30px;
   width: 450px;
-  border: 2px solid #d9534f;
+  border: 2px solid red;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-  border-radius: 3px;
 
   h2 {
     text-align: left;
@@ -175,24 +74,16 @@ div {
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0;
-    background-color: #d9534f;
-
+    background-color: #c00;
     color: #fff;
   }
 
   ul li {
     font-size: 12px;
-    padding-left: 8px;
-    list-style: none;
+    list-style: square;
   }
 }
 
 label {
   display: block;
 }
-
-/*.opportunities .organizations{
-    margin: auto;
-    width: 50%;
-    text-align: center;
-}*/
