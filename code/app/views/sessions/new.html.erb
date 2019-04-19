@@ -1,0 +1,25 @@
+<% provide(:title, "Log in")%>
+<div class="login-page">
+<h1>Log in</h1>
+
+
+<div>
+	<div class="login-inner">
+		<%if !logged_in?%>
+			<%= form_for(:sessions, url: login_path) do |f|%>
+				<%= f.label :email%>
+				<%= f.email_field :email%></br>
+				<%= f.label :password%>
+				<%= f.password_field :password%>
+				<%= f.submit "Log in"%>
+			<% end %>
+           		<li> <a <%= link_to "Create Student Account", signup_path %></a></li>
+            		<li> <a <%= link_to "Create Organization Account", orgsignup_path %></a></li>
+
+		<%else%>
+			<p> Already logged in. </p>
+		<%end%>
+	</div>
+</div>
+
+</div>

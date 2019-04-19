@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  opportunity_id: 1
+  email: MyString
+
+two:
+  opportunity_id: 1
+  email: MyString

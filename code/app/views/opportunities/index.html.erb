@@ -1,0 +1,72 @@
+<div class="opportunities">
+  <h1>Events</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="white-space: nowrap;">Event Name</th>
+        <th>Organization</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Date</th>
+        <th style="white-space: nowrap;">Issue Area</th>
+        <th colspan="2"></th>
+        <th style="white-space: nowrap;">
+          <%if session[:user_type] == 1 || session[:user_type] == 0%>
+
+          <div class= "styledButton">
+            <a class= "" <%= link_to 'New', new_opportunity_path, :class=>"" %></a>
+
+          </div>
+
+          <% end %>
+
+        </th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @opportunities.each do |opportunity| %>
+      <% if opportunity.get_approval(opportunity) && opportunity.on_date >= Date.current %>
+      <tr>
+        <td><%= opportunity.name %></td>
+        <td><%= opportunity.get_organization_name(opportunity.email) %></td>
+        <td><%= opportunity.city %></td>
+        <td><%= opportunity.state %></td>
+        <td style="white-space: nowrap;"><%= opportunity.on_date.strftime('%B %-d, %Y') %></td>
+        <td><%= opportunity.issue_area %></td>
+
+
+        <%if session[:user_email] == opportunity.email || session[:user_type] == 0%>
+          <td><%= link_to 'View', opportunity %></td>
+          <td><%= link_to 'Edit', edit_opportunity_path(opportunity) %></td>
+          <td><%= link_to 'Delete', opportunity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% elsif session[:user_type] != 2 %>
+          <td><%= link_to 'View', opportunity %></td>
+          <td></td>
+          <td></td>
+        <% end %>
+
+        <% if session[:user_type] == 2 %>
+          <td></td>
+          <td><%= link_to 'View', opportunity %></td>
+          <% if !opportunity.in_favorites?(session[:user_email])%>
+          <td><%= link_to 'Favorite',favorite_opportunity_path(@opportunity,:id => opportunity.id, type: "favorite"), method: :put %></td>
+          <% end %>
+
+          <% if opportunity.in_favorites?(session[:user_email])%>
+          <td><%= link_to 'Unfavorite', favorite_opportunity_path(@opportunity,:id => opportunity.id, type: "unfavorite"), method: :put %></td>
+          <% end %>
+        <% end %>
+
+      </tr>
+      <% end %>
+
+      <% end %>
+    </tbody>
+
+  </table>
+
+</div>
+<br>
