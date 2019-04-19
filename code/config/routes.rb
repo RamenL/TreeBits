@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :events
   resources :users #Where is the list of users?
   resources :sessions, only: [:create, :new, :destroy]
+  resources :tree_bits
   resources :opportunities do
     put :favorite, on: :member
   end
@@ -26,5 +27,5 @@ Rails.application.routes.draw do
   delete '/logout', to:'sessions#destroy'
   get '/orgsignup', to:'users#new_org'
   get '/dashboard', to:'organizations#dashboard', :as => :dashboard_path
-
+  get '/treebits', controller: 'tree_bits_controller', action:'index'
 end
