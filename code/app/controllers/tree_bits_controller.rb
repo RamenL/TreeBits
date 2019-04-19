@@ -1,0 +1,2 @@
+class TreeBitsController < ApplicationController
+end
