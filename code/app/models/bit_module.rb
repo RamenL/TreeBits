@@ -1,0 +1,2 @@
+class BitModule < ApplicationRecord
+end
