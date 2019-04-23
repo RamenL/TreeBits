@@ -12,12 +12,17 @@
 
 <p>
   <strong>Date added:</strong>
-  <%= @bit_module.date_added %>
+  <%= @bit_module.added_date %>
 </p>
 
 <p>
   <strong>Last modified:</strong>
   <%= @bit_module.last_modified %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @bit_module.bit_content %>
 </p>
 
 <p>
@@ -28,21 +33,6 @@
 <p>
   <strong>Sub topic two:</strong>
   <%= @bit_module.sub_topic_two %>
-</p>
-
-<p>
-  <strong>Sub topic three:</strong>
-  <%= @bit_module.sub_topic_three %>
-</p>
-
-<p>
-  <strong>Sub topic four:</strong>
-  <%= @bit_module.sub_topic_four %>
-</p>
-
-<p>
-  <strong>Sub topic five:</strong>
-  <%= @bit_module.sub_topic_five %>
 </p>
 
 <%= link_to 'Edit', edit_bit_module_path(@bit_module) %> |

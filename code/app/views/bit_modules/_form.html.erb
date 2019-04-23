@@ -23,12 +23,17 @@
 
   <div class="field">
     <%= f.label :date_added %>
-    <%= f.text_field :date_added %>
+    <%= f.text_field :added_date %>
   </div>
 
   <div class="field">
     <%= f.label :last_modified %>
     <%= f.text_field :last_modified %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bit_content %>
+    <%= f.text_area :bit_content %>
   </div>
 
   <div class="field">
@@ -40,22 +45,6 @@
     <%= f.label :sub_topic_two %>
     <%= f.number_field :sub_topic_two %>
   </div>
-
-  <div class="field">
-    <%= f.label :sub_topic_three %>
-    <%= f.number_field :sub_topic_three %>
-  </div>
-
-  <div class="field">
-    <%= f.label :sub_topic_four %>
-    <%= f.number_field :sub_topic_four %>
-  </div>
-
-  <div class="field">
-    <%= f.label :sub_topic_five %>
-    <%= f.number_field :sub_topic_five %>
-  </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

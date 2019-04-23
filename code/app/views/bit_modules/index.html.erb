@@ -11,9 +11,6 @@
       <th>Last modified</th>
       <th>Sub topic one</th>
       <th>Sub topic two</th>
-      <th>Sub topic three</th>
-      <th>Sub topic four</th>
-      <th>Sub topic five</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,13 +20,10 @@
       <tr>
         <td><%= bit_module.name %></td>
         <td><%= bit_module.author %></td>
-        <td><%= bit_module.date_added %></td>
+        <td><%= bit_module.added_date %></td>
         <td><%= bit_module.last_modified %></td>
         <td><%= bit_module.sub_topic_one %></td>
         <td><%= bit_module.sub_topic_two %></td>
-        <td><%= bit_module.sub_topic_three %></td>
-        <td><%= bit_module.sub_topic_four %></td>
-        <td><%= bit_module.sub_topic_five %></td>
         <td><%= link_to 'Show', bit_module %></td>
         <td><%= link_to 'Edit', edit_bit_module_path(bit_module) %></td>
         <td><%= link_to 'Destroy', bit_module, method: :delete, data: { confirm: 'Are you sure?' } %></td>
