@@ -69,6 +69,6 @@ class BitModulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bit_module_params
-      params.require(:bit_module).permit(:name, :author, :date_added, :last_modified, :sub_topic_one, :sub_topic_two, :sub_topic_three, :sub_topic_four, :sub_topic_five)
+      params.require(:bit_module).permit(:name, :author, :bit_content, :sub_topic_one, :sub_topic_two)
     end
 end

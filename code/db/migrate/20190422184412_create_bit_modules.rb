@@ -3,13 +3,11 @@ class CreateBitModules < ActiveRecord::Migration[5.0]
     create_table :bit_modules do |t|
       t.string :name
       t.string :author
-      t.string :date_added
       t.string :last_modified
+      t.string :added_date
+      t.string :bit_content
       t.integer :sub_topic_one
       t.integer :sub_topic_two
-      t.integer :sub_topic_three
-      t.integer :sub_topic_four
-      t.integer :sub_topic_five
 
       t.timestamps
     end

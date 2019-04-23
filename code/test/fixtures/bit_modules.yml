@@ -3,21 +3,17 @@
 one:
   name: MyString
   author: MyString
-  date_added: MyString
   last_modified: MyString
+  added_date: MyString
+  bit_content: MyString
   sub_topic_one: 1
   sub_topic_two: 1
-  sub_topic_three: 1
-  sub_topic_four: 1
-  sub_topic_five: 1
 
 two:
   name: MyString
   author: MyString
-  date_added: MyString
   last_modified: MyString
+  added_date: MyString
+  bit_content: MyString
   sub_topic_one: 1
   sub_topic_two: 1
-  sub_topic_three: 1
-  sub_topic_four: 1
-  sub_topic_five: 1

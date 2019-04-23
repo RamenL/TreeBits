@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180706163346) do
+ActiveRecord::Schema.define(version: 20190423183330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bit_modules", force: :cascade do |t|
+    t.string   "name"
+    t.string   "author"
+    t.string   "bit_content"
+    t.integer  "sub_topic_one"
+    t.integer  "sub_topic_two"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "favorite_opportunities", primary_key: ["opportunity_id", "email"], force: :cascade do |t|
     t.integer  "opportunity_id",            null: false
