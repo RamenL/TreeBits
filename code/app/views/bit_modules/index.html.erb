@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Author</th>
       <th>Date added</th>
@@ -18,10 +19,11 @@
   <tbody>
     <% @bit_modules.each do |bit_module| %>
       <tr>
+        <td><%= bit_module.id %></td>
         <td><%= bit_module.name %></td>
         <td><%= bit_module.author %></td>
-        <td><%= bit_module.added_date %></td>
-        <td><%= bit_module.last_modified %></td>
+        <td><%= bit_module.created_at %></td>
+        <td><%= bit_module.updated_at %></td>
         <td><%= bit_module.sub_topic_one %></td>
         <td><%= bit_module.sub_topic_two %></td>
         <td><%= link_to 'Show', bit_module %></td>
