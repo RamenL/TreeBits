@@ -20,6 +20,11 @@ class BitModulesController < ApplicationController
   # GET /bit_modules/1/edit
   def edit
   end
+  
+  def search
+    @bit_module = BitModule.find(params[:id])
+  end
+
 
   # POST /bit_modules
   # POST /bit_modules.json
