@@ -24,8 +24,8 @@
         <td><%= bit_module.author %></td>
         <td><%= bit_module.created_at %></td>
         <td><%= bit_module.updated_at %></td>
-        <td><%= bit_module.sub_topic_one %></td>
-        <td><%= bit_module.sub_topic_two %></td>
+        <td><%= BitModule.find(bit_module.sub_topic_one).name unless bit_module.sub_topic_one == 0%></td>
+        <td><%= BitModule.find(bit_module.sub_topic_two).name unless bit_module.sub_topic_two == 0%></td>
         <td><%= link_to 'Show', bit_module %></td>
         <td><%= link_to 'Edit', edit_bit_module_path(bit_module) %></td>
         <td><%= link_to 'Destroy', bit_module, method: :delete, data: { confirm: 'Are you sure?' } %></td>

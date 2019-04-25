@@ -17,12 +17,13 @@
 
 <p>
   <strong>Sub topic one:</strong>
-  <%= @bit_module.sub_topic_one %>
+  <%= BitModule.find(@bit_module.sub_topic_one).name unless @bit_module.sub_topic_one == 0 %>
 </p>
 
 <p>
   <strong>Sub topic two:</strong>
-  <%= @bit_module.sub_topic_two %>
+<!--  <%= @bit_module.sub_topic_two %> -->
+  <%= BitModule.find(@bit_module.sub_topic_two).name unless @bit_module.sub_topic_two == 0%>
 </p>
 
 <%= link_to 'Edit', edit_bit_module_path(@bit_module) %> |
