@@ -2,5 +2,7 @@
 
 <%= render 'form', bit_module: @bit_module %>
 
+<%= link_to BitModule.find(@bit_module.sub_topic_one).name, BitModule.find(@bit_module.sub_topic_one).name %> |
+
 <%= link_to 'Show', @bit_module %> |
 <%= link_to 'Back', bit_modules_path %>

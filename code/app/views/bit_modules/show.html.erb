@@ -22,8 +22,7 @@
 
 <p>
   <strong>Sub topic two:</strong>
-<!--  <%= @bit_module.sub_topic_two %> -->
-  <%= BitModule.find(@bit_module.sub_topic_two).name unless @bit_module.sub_topic_two == 0%>
+  <%= BitModule.find(@bit_module.sub_topic_two).name unless @bit_module.sub_topic_two == 0 %>
 </p>
 
 <%= link_to 'Edit', edit_bit_module_path(@bit_module) %> |
