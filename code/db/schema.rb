@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190423183330) do
+ActiveRecord::Schema.define(version: 20190425055245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20190423183330) do
     t.integer  "sub_topic_two"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "super_topic"
   end
 
   create_table "favorite_opportunities", primary_key: ["opportunity_id", "email"], force: :cascade do |t|

@@ -2,7 +2,14 @@
 
 <%= render 'form', bit_module: @bit_module %>
 
-<%= link_to BitModule.find(@bit_module.sub_topic_one).name, bit_module_path(id: @bit_module.sub_topic_one) %> |
-<%= link_to BitModule.find(@bit_module.sub_topic_two).name, bit_module_path(id: @bit_module.sub_topic_two) %> |
+<% if @bit_module.sub_topic_one != 0 %>
+  <%= link_to BitModule.find(@bit_module.sub_topic_one).name, bit_module_path(id: @bit_module.sub_topic_one) %> |
+<% end %>
+
+<% if @bit_module.sub_topic_two != 0 %>
+  <%= link_to BitModule.find(@bit_module.sub_topic_two).name, bit_module_path(id: @bit_module.sub_topic_two) %> |
+<% end %>
+
+
 <%= link_to 'Show', @bit_module %> |
 <%= link_to 'Back', bit_modules_path %>
