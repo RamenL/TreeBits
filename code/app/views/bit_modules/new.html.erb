@@ -2,4 +2,34 @@
 
 <%= render 'form', bit_module: @bit_module %>
 
+
+
+
+
+<table>
+ <thead>
+  <tr>
+   <th>ID</th>
+   <th>Name</th>
+   <th>Sub topic one</th>
+   <th>Sub topic two</th>
+   <th>Super topic</th>
+  </tr>
+ </thead>
+ <tbody>
+   <% @bit_modules.each do |bit_mod| %>
+     <tr>
+      <td><%= bit_mod.id %></td>
+      <td><%= bit_mod.name %></td>
+      <td><%= BitModule.find(bit_mod.sub_topic_one).name unless bit_mod.sub_topic_one ==0 %></td>
+      <td><%= BitModule.find(bit_mod.sub_topic_two).name unless bit_mod.sub_topic_two ==0 %></td>
+      <td><%= BitModule.find(bit_mod.super_topic).name unless bit_mod.super_topic ==0 %></td>
+     </tr>
+   <% end %>
+ </tbody>
+</table>
+<br>
+
+
+
 <%= link_to 'Back', bit_modules_path %>

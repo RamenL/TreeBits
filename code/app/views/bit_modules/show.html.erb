@@ -16,23 +16,25 @@
 </p>
 
 <p>
-  <strong>Sub topic one:</strong>
-  <%= BitModule.find(@bit_module.sub_topic_one).name unless @bit_module.sub_topic_one == 0 %>
+  <strong>Super Topic: </strong>
+  <% if @bit_module.super_topic != 0 %>
+    <%= link_to BitModule.find(@bit_module.super_topic.to_i).name, bit_module_path(id: @bit_module.super_topic.to_i) %> 
+  <% end %>
 </p>
 
 <p>
-  <strong>Sub topic two:</strong>
-  <%= BitModule.find(@bit_module.sub_topic_two).name unless @bit_module.sub_topic_two == 0 %>
-</p>
-
-
 <% if @bit_module.sub_topic_one != 0 %>
+  <strong>Sub topic one:</strong>
   <%= link_to BitModule.find(@bit_module.sub_topic_one.to_i).name, bit_module_path(id: @bit_module.sub_topic_one.to_i) %> |
 <% end %>
 
 <% if @bit_module.sub_topic_two != 0 %>
+  <strong>Sub topic two:</strong>
   <%= link_to BitModule.find(@bit_module.sub_topic_two.to_i).name, bit_module_path(id: @bit_module.sub_topic_two.to_i) %> |
 <% end %>
+</p>
 
+<p>
 <%= link_to 'Edit', edit_bit_module_path(@bit_module) %> |
 <%= link_to 'Back', bit_modules_path %>
+</p>

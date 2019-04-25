@@ -16,6 +16,7 @@ class BitModulesController < ApplicationController
   # GET /bit_modules/new
   def new
     @bit_module = BitModule.new
+    @bit_modules = BitModule.all
   end
 
   # GET /bit_modules/1/edit
