@@ -25,6 +25,14 @@
   <%= BitModule.find(@bit_module.sub_topic_two).name unless @bit_module.sub_topic_two == 0 %>
 </p>
 
-<%= link_to BitModule.find(@bit_module.sub_topic_one).name, @bit_module = BitModule.find(@bit_module.sub_topic_one) %> | 
+
+<% if @bit_module.sub_topic_one != 0 %>
+  <%= link_to BitModule.find(@bit_module.sub_topic_one.to_i).name, bit_module_path(id: @bit_module.sub_topic_one.to_i) %> |
+<% end %>
+
+<% if @bit_module.sub_topic_two != 0 %>
+  <%= link_to BitModule.find(@bit_module.sub_topic_two.to_i).name, bit_module_path(id: @bit_module.sub_topic_two.to_i) %> |
+<% end %>
+
 <%= link_to 'Edit', edit_bit_module_path(@bit_module) %> |
 <%= link_to 'Back', bit_modules_path %>

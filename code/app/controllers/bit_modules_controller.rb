@@ -10,6 +10,7 @@ class BitModulesController < ApplicationController
   # GET /bit_modules/1
   # GET /bit_modules/1.json
   def show
+    @bit_module = BitModule.find(params[:id])
   end
 
   # GET /bit_modules/new
@@ -21,11 +22,6 @@ class BitModulesController < ApplicationController
   def edit
   end
   
-  def search
-    @bit_module = BitModule.find(params[:id])
-  end
-
-
   # POST /bit_modules
   # POST /bit_modules.json
   def create
