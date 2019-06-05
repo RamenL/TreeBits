@@ -29,3 +29,7 @@ Finally, run the app.
     rails server
     
 The app should be available in the browser at [localhost:3000](localhost:3000).
+
+### Issues
+*When creating a new module, the super topic field does not automatically update its super node.
+*The topics field must be set to some number or zero for null fields.
