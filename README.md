@@ -1,5 +1,5 @@
-# SERVD
-Web application for the Community Engaged Learning (CEL) administrators, local community service organizations, and college students to list, manage, and volunteer for upcoming opportunities in the local area.
+# TreeBits
+This project is a web application that uses Ruby on Rails. It uses a BST structure to organize information into topics and subtopics. For example, a topic such as "What is Racism" could have a more specific learning topic nested underneath like "Model Minority" or "Defining Discrimination". This allows the user to learn about a topic and pick which learning path they want to take to learn more. 
 
 ## Development Setup
 
@@ -9,7 +9,7 @@ https://gorails.com/setup/
 
 Clone this repository: 
 
-    git clone https://github.com/TCNJSwEngg/servd.git
+    git clone https://github.com/darkhawk0000/TreeBits.git
 
 Once cloned, navigate to the servd/code directory and install the project dependencies. 
 
